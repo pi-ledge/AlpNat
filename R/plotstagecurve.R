@@ -1,4 +1,4 @@
-plot.stagecurve <- function(signal, start, end, col='red'){
+stagecurve <- function(signal, start, end, plot=F, xlim=NULL, lcol='red', regr.col='black', main=NULL, xlab=NULL, ylab=NULL){
   ganglinie <- data.frame(x=start:end)
   ganglinie$ln_x <- log(ganglinie$x)
   ganglinie$RA_max <- signal[start:end] / 100
@@ -24,7 +24,11 @@ plot.stagecurve <- function(signal, start, end, col='red'){
   ganglinie$skaliert <- ganglinie$RA_max - ganglinie$anpassung
   ganglinie$skaliert[(ganglinie$RA_max - ganglinie$anpassung) < 0] <- 0
   
-  plot(ganglinie$RA_max, type = 'l', col = col)
-  lines(ganglinie$trend, type = 'l', col = 'black', lwd = 2)
-  lines(ganglinie$anpassung, type = 'l', col = scales::alpha('black', 0.3), lwd = 2)
+  if (plot){
+    plot(ganglinie$RA_max, type = 'l', xlim = xlim, col = lcol, main=main, xlab=xlab, ylab=ylab)
+    lines(ganglinie$trend, type = 'l', col = regr.col, lwd = 2)
+    lines(ganglinie$anpassung, type = 'l', col = scales::alpha(regr.col, 0.3), lwd = 2)
+  }
+  
+  return(ganglinie)
 }
