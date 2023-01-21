@@ -1,4 +1,4 @@
-plt.3signals <- function(signal1, signal2, signal3, y=NULL, name1='', name2='', name3='', col1='red', col2='green', col3='blue', xlim=NULL, main='maximale Fließhöhe', xlab='ID', ylab='Amplitude'){
+plt.3signals <- function(signal1, signal2, signal3, y=NULL, name1='', name2='', name3='', col1='red', col2='green', col3='blue', xlim=NULL, main='maximale Fließhöhe', xlab='ID', ylab='Amplitude', cex = 0.5){
   if (is.null(y))   plot(c(1, length(signal1)), c(min(signal1, signal2, signal3), max(signal1, signal2, signal3)), col="white", xlab = xlab, ylab = ylab, main = main, xlim=xlim)
   if (!is.null(y))  plot(y, c(min(signal1, signal2, signal3), max(signal1, signal2, signal3)), col="white", xlab = xlab, ylab = ylab, main = main, xlim=xlim)
   
