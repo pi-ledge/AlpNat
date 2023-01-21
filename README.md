@@ -1,6 +1,6 @@
 # pizzR
 
-> *Copyright 2022 [Michael Lechner]. Licensed under the MIT license.*
+> *Copyright 2023 [Michael Lechner]. Licensed under the MIT license.*
 
 `AlpNat` is a collection of code which I've done during the work of on one of my Master Thesis. The package was created to provide the code for future research related on this topic
 
