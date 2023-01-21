@@ -1,0 +1,13 @@
+Package: AlpNat
+Type: Package
+Title: Package related to debris flows 
+Version: 0.1.0
+Author: pi-ledge
+Maintainer: pi-ledge <thechiefhimself@gmx.at>
+Description: AlpNat is a collection of code which I've done
+    during the work of on one of my Master Thesis. The package
+	was created to provide the code for future research related
+	on this topic
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
