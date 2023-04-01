@@ -1,4 +1,4 @@
-fudaa_kriging <- function(path, y.transect = 3, x.points = 10, y.points = 10, clustertype = 'FORK', ncores <- parallelly::availableCores() - 1){
+fudaa_kriging <- function(path, y.transect=3, x.points=10, y.points=10, clustertype='FORK', ncores=parallelly::availableCores() - 1){
 
   folders <- list.files(path, full.names = T)
   
